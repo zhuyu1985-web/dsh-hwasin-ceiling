@@ -1,0 +1,66 @@
+{
+  "name": "dsh-hwasin-ceiling",
+  "version": "0.1.0",
+  "description": "Pin the nearest user prompt to the top of a DeepSeek Harness transcript",
+  "license": "MIT",
+  "author": "hwasin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwasin/dsh-hwasin-ceiling.git"
+  },
+  "homepage": "https://github.com/hwasin/dsh-hwasin-ceiling#readme",
+  "bugs": {
+    "url": "https://github.com/hwasin/dsh-hwasin-ceiling/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis"
+  ],
+  "packageManager": "pnpm@10.16.1",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "lib/index.js",
+    "lib/client.js",
+    "lib/client.js.map",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "pnpm typecheck && pnpm test && pnpm build"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "0.1.0-rc.6"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "0.1.0-rc.6",
+    "jsdom": "^30.1.0",
+    "tsdown": "^0.22.14",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}
