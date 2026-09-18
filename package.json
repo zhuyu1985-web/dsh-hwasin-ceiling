@@ -6,11 +6,11 @@
   "author": "hwasin",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hwasin/dsh-hwasin-ceiling.git"
+    "url": "git+https://github.com/zhuyu1985-web/dsh-hwasin-ceiling.git"
   },
-  "homepage": "https://github.com/hwasin/dsh-hwasin-ceiling#readme",
+  "homepage": "https://github.com/zhuyu1985-web/dsh-hwasin-ceiling#readme",
   "bugs": {
-    "url": "https://github.com/hwasin/dsh-hwasin-ceiling/issues"
+    "url": "https://github.com/zhuyu1985-web/dsh-hwasin-ceiling/issues"
   },
   "keywords": [
     "deepseek-harness",

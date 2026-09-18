@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/hwasin/dsh-hwasin-ceiling/actions"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/hwasin/dsh-hwasin-ceiling/ci.yml?style=flat-square&amp;label=CI"></a>
+  <a href="https://github.com/zhuyu1985-web/dsh-hwasin-ceiling/actions"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/zhuyu1985-web/dsh-hwasin-ceiling/ci.yml?style=flat-square&amp;label=CI"></a>
   <a href="./LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-3167E3?style=flat-square"></a>
   <img alt="DeepSeek Harness" src="https://img.shields.io/badge/DeepSeek%20Harness-0.1.0--rc.6-3167E3?style=flat-square">
 </p>
