@@ -38,10 +38,10 @@ const STYLES = `
 }
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
   .hwasinCeilingBar{
-    background:color-mix(in srgb, var(--dsw-alias-bg-base) 74%, transparent);
+    background:color-mix(in srgb, var(--dsw-alias-bg-base) 58%, transparent);
     box-shadow:none;
-    -webkit-backdrop-filter:blur(18px) saturate(1.5);
-    backdrop-filter:blur(18px) saturate(1.5);
+    -webkit-backdrop-filter:blur(22px) saturate(1.5);
+    backdrop-filter:blur(22px) saturate(1.5);
   }
 }
 .hwasinCeilingBar[data-hwasin-visible]{opacity:1}
