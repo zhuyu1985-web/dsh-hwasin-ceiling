@@ -5,18 +5,20 @@ import { installStickyUserRows } from "./installSticky.ts";
 const STYLE_ID = "dsh-hwasin-ceiling";
 // The pinned bar echoes one message bubble, so it borrows that bubble's own
 // measurements and font axis (`--dsh-content-font-size` / `-delta`) instead of
-// freezing a size: the Settings font-size preference moves both together.
+// freezing a size: the Settings font-size preference moves both together. The
+// bar sits one step below the bubble (`- 1px`) so it reads as a compact echo.
 //
-// Stacking: message chrome such as sticky code-block headers carries its own
-// z-index inside the same scroller, so the host must sit well above content
-// level (5 lost to code headers) yet below the portal layer dialogs and menus
-// live on — 999 is that gap. The glass skin is gated behind @supports and
-// degrades to the old opaque bar where backdrop-filter is missing.
+// Stacking: the harness pins its own transcript chrome on a documented ladder
+// (ConversationRoot.module.css) — CodeBlock sticky banners at 6, the pinned
+// compaction header / turn rail / sticky composer at 7, back-to-bottom at 8,
+// floating panels from 10, dialogs at 1100. The bar belongs in the 7 tier with
+// the harness' own pinned headers: above code banners, below every interactive
+// overlay another plugin may open.
 const STYLES = `
 [data-hwasin-ceiling-host]{
   position:sticky;
   top:0;
-  z-index:999;
+  z-index:7;
   height:0;
   overflow:visible;
   pointer-events:none;
@@ -57,22 +59,22 @@ const STYLES = `
   background:color-mix(in srgb, var(--dsw-specific-bubble) 75%, transparent);
   color:var(--dsw-alias-label-primary);
   font:inherit;
-  font-size:var(--dsh-content-font-size, 14px);
-  line-height:calc(22px + var(--dsh-content-font-delta, 0px));
+  font-size:calc(var(--dsh-content-font-size, 14px) - 1px);
+  line-height:calc(22px + var(--dsh-content-font-delta, 0px) - 1px);
   text-align:left;
   pointer-events:auto;
   cursor:pointer;
   will-change:transform;
   box-shadow:
-    inset 0 0 0 1px color-mix(in srgb, var(--dsw-alias-label-primary) 7%, transparent),
-    inset 0 1px 0 rgba(255, 255, 255, 0.28),
-    0 10px 24px -12px color-mix(in srgb, var(--dsw-alias-label-primary) 26%, transparent);
+    inset 0 0 0 1px color-mix(in srgb, var(--dsw-alias-label-primary) 4%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 10px 24px -12px color-mix(in srgb, var(--dsw-alias-label-primary) 14%, transparent);
 }
 .hwasinCeilingPrompt:hover{
   box-shadow:
     inset 0 0 0 1px var(--dsw-alias-border-l3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.36),
-    0 12px 28px -12px color-mix(in srgb, var(--dsw-alias-label-primary) 34%, transparent);
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 12px 28px -12px color-mix(in srgb, var(--dsw-alias-label-primary) 20%, transparent);
 }
 .hwasinCeilingPrompt:focus-visible{
   outline:none;
