@@ -38,10 +38,19 @@ const STYLES = `
 }
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
   .hwasinCeilingBar{
-    background:color-mix(in srgb, var(--dsw-alias-bg-base) 40%, transparent);
+    background:transparent;
     box-shadow:none;
+  }
+  .hwasinCeilingBar::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background:color-mix(in srgb, var(--dsw-alias-bg-base) 40%, transparent);
     -webkit-backdrop-filter:blur(22px) saturate(1.5);
     backdrop-filter:blur(22px) saturate(1.5);
+    -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 62%, transparent 100%);
+    mask-image:linear-gradient(to bottom, #000 0%, #000 62%, transparent 100%);
   }
 }
 .hwasinCeilingBar[data-hwasin-visible]{opacity:1}
