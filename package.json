@@ -1,6 +1,6 @@
 {
   "name": "dsh-hwasin-ceiling",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pin the nearest user prompt to the top of a DeepSeek Harness transcript",
   "license": "MIT",
   "author": "hwasin",
