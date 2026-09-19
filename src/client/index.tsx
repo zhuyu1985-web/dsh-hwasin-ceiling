@@ -38,7 +38,7 @@ const STYLES = `
 }
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
   .hwasinCeilingBar{
-    background:color-mix(in srgb, var(--dsw-alias-bg-base) 58%, transparent);
+    background:color-mix(in srgb, var(--dsw-alias-bg-base) 40%, transparent);
     box-shadow:none;
     -webkit-backdrop-filter:blur(22px) saturate(1.5);
     backdrop-filter:blur(22px) saturate(1.5);
