@@ -19,7 +19,13 @@
 ## 安装
 
 ```sh
-npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling
+npx @deepseek-ai/dsh plugin --profile web add dsh-hwasin-ceiling
+```
+
+裸名安装的是 npm 发布版。也可以直接从 GitHub 安装：
+
+```sh
+npx @deepseek-ai/dsh plugin --profile web add github:zhuyu1985-web/dsh-hwasin-ceiling
 ```
 
 重启 Harness，然后硬刷新浏览器。对话里至少有一条用户消息后，往上滚动：提问离开滚动区顶部时，摘要条会出现。
@@ -27,7 +33,7 @@ npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling
 需要可复现安装时，在仓库地址后加上提交 SHA：
 
 ```sh
-npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling#fa3241a
+npx @deepseek-ai/dsh plugin --profile web add github:zhuyu1985-web/dsh-hwasin-ceiling#10b8cde
 ```
 
 ## 会做什么
@@ -48,7 +54,7 @@ npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling#f
 
 ```sh
 npx @deepseek-ai/dsh plugin --profile web remove dsh-hwasin-ceiling
-npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling
+npx @deepseek-ai/dsh plugin --profile web add dsh-hwasin-ceiling
 ```
 
 两条命令之后都要重启 Harness。

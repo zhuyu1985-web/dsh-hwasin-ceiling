@@ -19,7 +19,13 @@ Original bubbles keep their layout. The plugin does not edit messages, fork sess
 ## Install
 
 ```sh
-npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling
+npx @deepseek-ai/dsh plugin --profile web add dsh-hwasin-ceiling
+```
+
+The bare name installs the npm release. To install straight from GitHub instead:
+
+```sh
+npx @deepseek-ai/dsh plugin --profile web add github:zhuyu1985-web/dsh-hwasin-ceiling
 ```
 
 Restart Harness, then hard-refresh the browser. After at least one user message exists, scroll the transcript: when a prompt leaves the top of the scrollport, the bar appears.
@@ -27,7 +33,7 @@ Restart Harness, then hard-refresh the browser. After at least one user message 
 To lock a reproducible install, append a commit SHA:
 
 ```sh
-npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling#fa3241a
+npx @deepseek-ai/dsh plugin --profile web add github:zhuyu1985-web/dsh-hwasin-ceiling#10b8cde
 ```
 
 ## What it does
@@ -48,7 +54,7 @@ npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling#f
 
 ```sh
 npx @deepseek-ai/dsh plugin --profile web remove dsh-hwasin-ceiling
-npx @deepseek-ai/dsh plugin --profile web add github:hwasin/dsh-hwasin-ceiling
+npx @deepseek-ai/dsh plugin --profile web add dsh-hwasin-ceiling
 ```
 
 Restart Harness after either command.
