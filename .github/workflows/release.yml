@@ -18,7 +18,9 @@ jobs:
           version: 10.16.1
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # Node 24 bundles npm 11, the minimum for OIDC trusted publishing
+          # (npm >= 11.5.1 performs the id-token exchange inside npm publish).
+          node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
