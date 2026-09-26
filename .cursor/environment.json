@@ -1,0 +1,4 @@
+{
+  "name": "dsh-hwasin-ceiling",
+  "install": "export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; nvm use default > /dev/null; corepack enable > /dev/null 2>&1 || true; pnpm install --frozen-lockfile"
+}
